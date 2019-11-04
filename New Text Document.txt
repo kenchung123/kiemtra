@@ -1,0 +1,61 @@
+BT D17/10
+ke hoach ktra
+b1 : phan loai
+b2 :du tru bat bien cua vong lap
+b3 : ktra {A} =p1> {C}
+b4 : ktra {C} la bat bien cua p2
+b5 : co {C,!Dkien lap}
+b6 : ktra {C,!Dkien lap} =p3> {B}
+bai tap : lap ke hoach kiem tra
+a,
+{A}
+p1  	Q1;
+        x1= F1;
+        IF E1 then Q2
+P2:    while E2 do Q3;
+p3	while E3 do
+ 		Begin
+			Q4;
+			x2= F2;
+			while E2 do Q6;
+		End;
+p4:	       x2=F7;
+{B}
+b,
+{A}
+p1  :if E1 then P1 else
+   Begin
+	x1= F1;
+	p2;
+     while E2 do P2
+     End;
+ p2: while E2 do
+  Begin
+	if E2 then P3;
+	P4;
+	p5;
+	while E3 do
+	if E1 then z= z+8 
+		else P4
+  	End
+ p3:   p5;
+  z= z+ F2(y)
+{B}
+
+giai bt1 : 
+b1: phan hoach
++ du tru {C1} la bat bien cua p2,{C2} la bat bien cua P3;.....b11,b12,b13......
+b2 : Kiem tra {A} =p1> {C1}
+b3 : Kiem tra {C1,E2} =Q3> {C1}
+b4 : Co {C1, !E2}
+b5 : kiem tra {C1,!E2}=L> {C2}
+b6 : kiem tra {C2,E3}=p5> {C2} ....... b61,b62....
+b7: Co {C2,!E3}
+b8: kiem tra {C2,!C3} =p4> {B} <=> kiem tra {C2,!E3} =L>{B[x2/F7]}
+
+bai tap 2 :
+viet code, lap ke hoach va kiem tra cac doan trinh do
+a,tinh tong cua day n phan tu
+b, tim 1 phan tu trong day co n phan tu
+c,tim 1 phan tu trong day da duoc sap co n phan tu
+d,sap xep day co n phan tu : sap doi cho,sap xep nhanh ....
